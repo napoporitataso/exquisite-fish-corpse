@@ -1,0 +1,11 @@
+.sharedResultPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.errorMessage {
+  margin: 0;
+  color: var(--color-error-strong);
+  font-weight: bold;
+}

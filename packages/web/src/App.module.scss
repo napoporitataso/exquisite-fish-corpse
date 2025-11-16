@@ -1,0 +1,94 @@
+.appShell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  button {
+    background: none;
+    border: none;
+    color: var(--color-link);
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+  }
+}
+
+.headerLogo {
+  justify-content: center;
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+}
+
+.headerPlaying {
+  padding-right: 1rem;
+  justify-content: flex-end;
+  button {
+    text-decoration: underline;
+  }
+}
+
+.singleColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footerList {
+  list-style: none;
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+
+  details {
+    summary {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    > div {
+      margin: 0 0 0 1rem;
+    }
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+.footerMiscList {
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 0.85rem;
+  li {
+    &::after {
+      content: '|';
+      margin: 0 0.5rem;
+    }
+    &:last-child::after {
+      content: '';
+      margin: 0;
+    }
+  }
+}
+
+.alert {
+  padding: 12px 18px;
+  border-radius: 8px;
+}
+
+.alertError {
+  background-color: var(--color-error-bg);
+  color: var(--color-error-text);
+}

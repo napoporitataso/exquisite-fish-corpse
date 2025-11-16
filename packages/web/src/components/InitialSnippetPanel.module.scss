@@ -1,0 +1,73 @@
+.initialForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  select {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+.errorList {
+  list-style: disc;
+  margin: 12px 0 0 20px;
+  padding: 0;
+
+  li {
+    margin: 0.2rem 0;
+  }
+}
+
+.formLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.presetSelect {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.seedRows {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.seedColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  > div {
+    &::before {
+      content: '▉';
+      margin-right: 0.2rem;
+      color: var(--color-accent);
+    }
+    .seedNote {
+      margin-left: 0.5rem;
+      font-weight: normal;
+      color: var(--color-helper);
+    }
+  }
+
+  textarea {
+    line-height: 1.2;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    min-height: 3.5rem;
+    resize: vertical;
+    field-sizing: content;
+  }
+}

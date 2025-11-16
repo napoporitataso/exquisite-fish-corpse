@@ -1,0 +1,28 @@
+.progressPanel {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.8rem;
+  gap: 8px;
+}
+
+.progressLabel {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.progressTrack {
+  overflow: hidden;
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background-color: var(--color-progress-track);
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--gradient-progress);
+  transition: width 0.3s ease;
+}

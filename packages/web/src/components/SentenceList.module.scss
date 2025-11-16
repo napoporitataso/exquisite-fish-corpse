@@ -1,0 +1,28 @@
+.sentenceList {
+  counter-reset: sentence-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0;
+
+  li {
+    counter-increment: sentence-counter;
+
+    &::marker {
+      content: counter(sentence-counter) ':　';
+      color: var(--color-helper);
+    }
+  }
+}
+
+.snippetChips {
+  margin: 0;
+}
+
+.snippetChip {
+  margin-inline: 0.1rem;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+}

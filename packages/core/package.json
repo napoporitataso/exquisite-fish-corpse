@@ -1,0 +1,36 @@
+{
+  "name": "@exquisite-fish-corpse/core",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "default": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "scripts": {
+    "dev": "tsdown --watch",
+    "test": "vitest --run",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "build": "tsdown"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "4.0.8",
+    "tsdown": "^0.16.1"
+  }
+}

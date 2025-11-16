@@ -1,0 +1,43 @@
+.debugPanel {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px dashed var(--color-border);
+  border-radius: 0.5rem;
+  background-color: var(--color-card-bg);
+
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+
+.debugLine {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+.debugContent {
+  font-weight: 400;
+}
+
+.debugPosition {
+  color: var(--color-highlight-text);
+}
+
+.debugNeighbors {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-helper);
+}

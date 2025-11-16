@@ -1,0 +1,57 @@
+.card {
+  background-color: var(--color-card-bg);
+  padding: 24px;
+  box-shadow: 0 4px var(--shadow-color);
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}
+
+.helperText {
+  margin-top: 4px;
+  margin-bottom: 16px;
+  color: var(--color-helper);
+  font-size: 0.9rem;
+}
+
+.helperTextError {
+  color: var(--color-error-strong);
+}
+
+.helperTextSmall {
+  font-size: 0.85rem;
+}
+
+.formActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  border: none;
+  border-radius: 0.4rem;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  transition: background-color 0.2s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.primaryButton {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}

@@ -1,0 +1,86 @@
+:root {
+  color-scheme: light;
+  --color-text: hsl(0, 0%, 11%);
+  --color-bg: hsl(0, 0%, 95%);
+  --color-card-bg: hsl(0, 0%, 100%);
+  --color-helper: hsl(0, 0%, 31%);
+  --color-border: hsl(0, 0%, 78%);
+  --color-button-bg: hsl(0, 0%, 91%);
+  --color-button-text: hsl(0, 0%, 11%);
+  --color-primary: hsl(0, 0%, 0%);
+  --color-on-primary: hsl(0, 0%, 100%);
+  --color-highlight-text: hsl(0, 0%, 28%);
+  --color-highlight-bg: hsl(0, 0%, 90%);
+  --color-error-bg: hsl(0, 93%, 94%);
+  --color-error-text: hsl(0, 71%, 36%);
+  --color-error-strong: hsl(0, 74%, 53%);
+  --color-progress-track: hsl(0, 0%, 91%);
+  --color-accent: hsl(350, 100%, 35%);
+  --outline-color: hsl(200, 100%, 43%);
+  --gradient-progress: linear-gradient(90deg, hsl(0, 0%, 33%), hsl(0, 0%, 60%));
+  --shadow-color: rgba(15, 23, 42, 0.1);
+}
+
+// :root[data-theme='dark'] {
+//   color-scheme: dark;
+//   --color-text: hsl(220, 13%, 91%);
+//   --color-bg: hsl(220, 13%, 7%);
+//   --color-card-bg: hsl(220, 0%, 10%);
+//   --color-helper: hsl(220, 13%, 58%);
+//   --color-border: hsl(220, 13%, 33%);
+//   --color-button-bg: hsl(220, 13%, 23%);
+//   --color-button-text: hsl(220, 13%, 91%);
+//   --color-primary: hsl(221, 83%, 53%);
+//   --color-on-primary: hsl(0, 0%, 100%);
+//   --color-highlight-text: hsl(224, 76%, 48%);
+//   --color-highlight-bg: hsl(215, 100%, 94%);
+//   --color-error-bg: hsl(0, 93%, 29%);
+//   --color-error-text: hsl(0, 71%, 76%);
+//   --color-error-strong: hsl(0, 74%, 71%);
+//   --color-progress-track: hsl(220, 13%, 23%);
+//   --outline-color: hsl(200, 100%, 63%);
+//   --gradient-progress: linear-gradient(90deg, hsl(207, 90%, 70%), hsl(187, 90%, 70%));
+//   --shadow-color: rgba(0, 0, 0, 0.4);
+// }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family:
+    'Noto Sans JP',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+button:focus {
+  outline: 2px solid var(--outline-color);
+  outline-offset: 1px;
+}

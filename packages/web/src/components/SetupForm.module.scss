@@ -1,0 +1,31 @@
+.formGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  input,
+  textarea {
+    line-height: 1.2;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  textarea {
+    resize: vertical;
+    field-sizing: content;
+  }
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}

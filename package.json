@@ -1,9 +1,14 @@
 {
   "private": true,
-  "name": "le-cadavre-exquis",
+  "name": "exquisite-fish-corpse",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write .",
+    "dev": "run-p dev:core dev:web",
+    "dev:core": "pnpm --filter @exquisite-fish-corpse/core run dev",
+    "dev:web": "pnpm --filter @exquisite-fish-corpse/web run dev",
+    "lint": "pnpm --filter ./packages/** run lint",
+    "build:core": "pnpm --filter @exquisite-fish-corpse/core run build"
   },
   "packageManager": "pnpm@10.20.0",
   "devDependencies": {
@@ -12,12 +17,12 @@
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-unicorn": "^62.0.0",
+    "npm-run-all2": "^8.0.4",
     "prettier": "^3.6.2",
     "typescript-eslint": "^8.46.3",
     "vitest": "^4.0.8"
   },
   "dependencies": {
-    "kuromoji": "^0.1.2",
     "typescript": "^5.9.3"
   }
 }
