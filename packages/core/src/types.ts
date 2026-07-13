@@ -76,6 +76,12 @@ export type SingleExquisiteCorpseInstance = {
  */
 export type SingleExquisiteCorpseOptions = {
   /**
+   * ゲーム内の選択に利用する乱数生成関数
+   * 未指定の場合は Math.random を利用します
+   * @default Math.random
+   */
+  random?: () => number;
+  /**
    * 次のプレイヤーに提示する断片の最大トークン数
    * `maxCharsForNextPlayer` と併用時は短い方が優先されます
    * @default 3

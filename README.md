@@ -20,6 +20,60 @@
 
 - `packages/core`: コアライブラリ
 - `packages/web`: Web UI
+- `packages/cli`: CLI
+
+## CLI
+
+CLIを初めて使うときやソースを変更したときは、単体ファイルへビルドする。
+
+```sh
+pnpm build:cli
+```
+
+以降の `pnpm cli` はビルド済みのCLIをそのまま実行する。
+
+```sh
+pnpm cli --help
+```
+
+別の場所へ持ち出す場合は、生成された `packages/cli/dist/cli.mjs` だけをコピーする。
+
+```sh
+node cli.mjs --help
+```
+
+以下コマンドで新規ゲームを作成する。初期断片のフラグはそれぞれ複数回指定できる。
+
+```sh
+pnpm cli new \
+  --state game.json \
+  --seed 12345 \
+  --beginning "昨今の情勢を鑑みるに、" \
+  --middle "やっぱり借金って怖いもので、" \
+  --end "彼はただ泣きそうな顔で笑った。" \
+  --json
+```
+
+1ターンずつ遊ぶ場合は、以下を完成まで繰り返す。
+
+```sh
+pnpm cli next --state game.json --json
+pnpm cli answer --state game.json --challenge-id ID --text "続きの断片" --json
+pnpm cli result --state game.json --json
+```
+
+人間がターミナルで対話的に遊ぶ場合は `play` を使う。`new` と同じ初期断片・設定を指定できる。
+
+```sh
+pnpm cli play --state game.json --seed 12345 \
+  --beginning "始まりは" --middle "魚が空を" --end "静かに眠った。"
+```
+
+コーディングエージェント向けの遊び方と禁止事項は `--llm` で出力できる。
+
+```sh
+pnpm cli --llm
+```
 
 ## 生成AIの利用
 
@@ -28,12 +82,16 @@
 - GitHub Copilot
   - 手打ちでコード直すときの補完
   - ドキュメントの補完
-- Codex (Model: gpt-5-codex)
+- gpt-5-codex (Codexから) ※2025年11月
   - 全体的なコーディング
-- ChatGPT (GPT-5 / GPT-5.1)
+- GPT-5, GPT-5.1 (ChatGPTから) ※2025年11月
   - 最初のアイデアを要求仕様に落とし込む部分
   - これがシュルレアリスム足り得るかの議論
   - ほか雑多な相談事
+- GPT-5.6 Sol (Codexから) ※2026年7月
+  - CLI開発
+- Gemma 4 26B A4B (Piから) ※2026年7月
+  - CLIテストプレイ
 
 人間が担当したのは以下の部分。
 

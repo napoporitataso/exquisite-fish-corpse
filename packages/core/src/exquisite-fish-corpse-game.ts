@@ -24,7 +24,7 @@ export class ExquisiteFishCorpseGame {
 
   constructor(options: SingleExquisiteCorpseOptions = {}) {
     this.internal = new InternalExquisiteFishCorpseGame(options, {
-      random: () => Math.random(),
+      random: options.random ?? (() => Math.random()),
       tokenize: this.createTokenizer(),
     });
   }

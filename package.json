@@ -7,8 +7,11 @@
     "dev": "run-p dev:core dev:web",
     "dev:core": "pnpm --filter @exquisite-fish-corpse/core run dev",
     "dev:web": "pnpm --filter @exquisite-fish-corpse/web run dev",
+    "dev:cli": "tsx packages/cli/src/cli.ts",
+    "cli": "node packages/cli/dist/cli.mjs",
     "lint": "pnpm --filter ./packages/** run lint",
-    "build:core": "pnpm --filter @exquisite-fish-corpse/core run build"
+    "build:core": "pnpm --filter @exquisite-fish-corpse/core run build",
+    "build:cli": "pnpm --filter @exquisite-fish-corpse/cli run build"
   },
   "packageManager": "pnpm@10.20.0",
   "devDependencies": {
@@ -23,6 +26,6 @@
     "vitest": "^4.0.8"
   },
   "dependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "~5.9.3"
   }
 }

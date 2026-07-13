@@ -1,0 +1,25 @@
+{
+  "name": "@exquisite-fish-corpse/cli",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "bin": {
+    "efc": "dist/cli.mjs"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.mjs",
+    "test": "vitest --run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "@exquisite-fish-corpse/core": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.6",
+    "tsdown": "^0.16.1",
+    "vitest": "^4.0.8"
+  }
+}

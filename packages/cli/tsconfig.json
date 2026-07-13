@@ -1,0 +1,10 @@
+{
+  "extends": "../core/tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "vitest/globals"],
+    "paths": {
+      "@exquisite-fish-corpse/core": ["../core/src/index.ts"]
+    }
+  },
+  "include": ["src", "tsdown.config.ts", "vitest.config.ts"]
+}
